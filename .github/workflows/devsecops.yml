@@ -8,7 +8,7 @@ on:
 
 env:
   PYTHON_VERSION: "3.11"
-  TARGET_APP: "part1/app_secure.py"
+  TARGET_APP: "part1/app_vulnerable.py"
 
 jobs:
   # ─── Job 1: SAST — Bandit ──────────────────────────────────────────────────
@@ -96,7 +96,7 @@ jobs:
       - name: Run Gitleaks on application code only
         run: |
           mkdir -p scan-target
-          cp part1/app_secure.py scan-target/
+          cp part1/app_vulnerable.py scan-target/
           cp requirements.txt scan-target/
           gitleaks detect \
             --source scan-target \
