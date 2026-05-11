@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+
+# Lab artifacts
+users.db
+*.db
+
+# Reports (gardés en local mais pas sur GitHub)
+report/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Scan outputs from current dir
+bandit_*.txt
+bandit_*.json
+bandit_*.html
